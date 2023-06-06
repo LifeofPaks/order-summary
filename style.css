@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --White: #fff;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+}
+
+.container{
+    max-width: 450px;
+    background: var(--White);
+    border-radius: 1rem;
+}
+
+.img-box{
+    width: 100%;
+}
+
+.img-box img{
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.summary{
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.title{
+    font-size: 1.8rem;
+    color: var(--Dark-blue);
+    margin-bottom: 1rem;
+}
+
+.info{
+    color: var(--Desaturated-blue);
+    width: 350px;
+    line-height: 25px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.plan-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: var(--Very-pale-blue);
+    margin-bottom: 2rem;
+}
+
+.music-plan{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.plan-title{
+    color: var(--Dark-blue);
+}
+
+.plan{
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.plan-amount{
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+
+.change-plan{
+    color: var(--Bright-blue);
+    font-weight: 700;
+    font-size: .8rem;
+    transition: 0.3s;
+}
+
+.change-plan:hover{
+    opacity: .7;
+}
+
+button{
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+}
+
+.proceed{
+    color: var(--White);
+    background: var(--Bright-blue);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--Bright-blue);
+    transition: 0.3s;
+}
+
+.proceed:hover{
+    opacity: .7;
+}
+
+.cancel{
+    transition: 0.3s;
+}
+
+.cancel:hover{
+    color: var(--Dark-blue);
+}
+
+/* MAKE IT RESPONSIVE */
+
+@media (max-width: 600px){
+    .container{
+        margin: 2rem;
+        max-width: 375px;
+    }
+
+    .summary{
+        padding: 1.5rem;
+    }
+
+    .title{
+        font-size: 1.6rem;;
+    }
+
+    .info{
+        width: fit-content;
+    }
+}
